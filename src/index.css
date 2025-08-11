@@ -3,32 +3,32 @@
 
 /* Define la nueva paleta de colores usando variables CSS */
 :root {
-  --color-dark-brown: #714329;
-  --color-medium-brown: #B08463;
-  --color-light-medium-brown: #B9937B;
-  --color-beige: #D0B9A7;
-  --color-muted-brown: #B5A192;
+  --color-snuff: #e7e2f3;
+  --color-dull-lavender: #a7b2e6;
+  --color-danube: #688cca;
+  --color-kashmir-blue: #496d9c;
+  --color-rhino: #2d3c67;
   --color-white: #ffffff;
   --color-off-white: #f8f9fa;
 
-  --bs-primary: var(--color-dark-brown);
-  --bs-primary-rgb: 113, 67, 41;
-  
-  --bs-secondary: var(--color-medium-brown);
-  --bs-secondary-rgb: 176, 132, 99;
+  --bs-primary: var(--color-rhino);
+  --bs-primary-rgb: 45, 60, 103;
 
-  --bs-dark: var(--color-dark-brown);
-  --bs-dark-rgb: 113, 67, 41;
+  --bs-secondary: var(--color-dull-lavender);
+  --bs-secondary-rgb: 167, 178, 230;
 
-  --bs-light: var(--color-beige);
-  --bs-light-rgb: 208, 185, 167;
+  --bs-dark: var(--color-kashmir-blue);
+  --bs-dark-rgb: 73, 109, 156;
 
-  --bs-body-color: var(--color-dark-brown);
-  --bs-body-bg: var(--color-off-white);
-  --bs-secondary-bg: var(--color-beige);
+  --bs-light: var(--color-snuff);
+  --bs-light-rgb: 231, 226, 243;
 
-  --bs-border-color: var(--color-muted-brown);
-  --bs-border-color-translucent: rgba(113, 67, 41, 0.175);
+  --bs-body-color: var(--color-rhino);
+  --bs-body-bg: var(--color-snuff);
+  --bs-secondary-bg: var(--color-dull-lavender);
+
+  --bs-border-color: var(--color-kashmir-blue);
+  --bs-border-color-translucent: rgba(45, 60, 103, 0.175);
 }
 
 body {
@@ -43,35 +43,35 @@ body {
 .btn-primary {
   --bs-btn-bg: var(--bs-primary);
   --bs-btn-border-color: var(--bs-primary);
-  --bs-btn-hover-bg: var(--color-medium-brown);
-  --bs-btn-hover-border-color: var(--color-medium-brown);
-  --bs-btn-active-bg: var(--color-medium-brown);
-  --bs-btn-active-border-color: var(--color-medium-brown);
+  --bs-btn-hover-bg: var(--color-kashmir-blue);
+  --bs-btn-hover-border-color: var(--color-kashmir-blue);
+  --bs-btn-active-bg: var(--color-kashmir-blue);
+  --bs-btn-active-border-color: var(--color-kashmir-blue);
   --bs-btn-color: var(--color-white);
   --bs-btn-hover-color: var(--color-white);
   --bs-btn-active-color: var(--color-white);
 }
 
 .btn-outline-primary {
-    --bs-btn-color: var(--bs-primary);
-    --bs-btn-border-color: var(--bs-primary);
-    --bs-btn-hover-bg: var(--bs-primary);
-    --bs-btn-hover-border-color: var(--bs-primary);
-    --bs-btn-hover-color: var(--color-white);
-    --bs-btn-active-bg: var(--bs-primary);
-    --bs-btn-active-border-color: var(--bs-primary);
-    --bs-btn-active-color: var(--color-white);
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-hover-color: var(--color-white);
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-primary);
+  --bs-btn-active-color: var(--color-white);
 }
 
 .btn.disabled, .btn:disabled {
-  background-color: var(--color-muted-brown) !important;
-  border-color: var(--color-muted-brown) !important;
+  background-color: var(--color-kashmir-blue) !important;
+  border-color: var(--color-kashmir-blue) !important;
   opacity: 0.7;
 }
 
 /* --- ESTILOS PARA EL FOOTER --- */
 .footer-link {
-  color: var(--color-beige);
+  color: var(--color-dull-lavender);
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
@@ -80,7 +80,7 @@ body {
   text-decoration: underline;
 }
 .footer-social-icon {
-  color: var(--color-beige);
+  color: var(--color-dull-lavender);
   margin-left: 1rem;
   transition: color 0.2s ease-in-out;
 }
@@ -88,12 +88,12 @@ body {
   color: var(--color-white);
 }
 
-/* --- ¡NUEVO! ESTILOS RESPONSIVOS PARA EL CATÁLOGO --- */
+/* --- ESTILOS RESPONSIVOS PARA EL CATÁLOGO --- */
 .mobile-filter-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1030; /* Debe estar sobre otros elementos */
+  z-index: 1030;
   border-radius: 50px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
@@ -105,14 +105,12 @@ body {
 .offcanvas .card-header {
   border-bottom: 1px solid var(--bs-border-color);
 }
-/* --- FIN DE ESTILOS RESPONSIVOS --- */
-
 
 /* --- OTROS ESTILOS --- */
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-brand,
 footer.bg-dark a.text-light {
-  color: var(--color-off-white) !important;
+  color: var(--color-snuff) !important;
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
@@ -121,7 +119,7 @@ footer.bg-dark a.text-light {
 }
 
 .bg-primary .lead, .bg-primary .display-4, .bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary h4, .bg-primary h5 {
-  color: var(--color-off-white) !important;
+  color: var(--color-snuff) !important;
 }
 
 .product-card {
@@ -145,14 +143,38 @@ footer.bg-dark a.text-light {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-beige);
+  background: var(--color-snuff);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-medium-brown);
+  background: var(--color-dull-lavender);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-dark-brown);
+  background: var(--color-rhino);
+}
+
+/* --- ESTILOS EXTRA CON TU PALETA --- */
+.bg-snuff {
+  background-color: var(--color-snuff) !important;
+}
+.bg-rhino {
+  background-color: var(--color-rhino) !important;
+}
+.text-purple {
+  color: var(--color-dull-lavender) !important;
+}
+.text-blue-accent {
+  color: var(--color-kashmir-blue) !important;
+}
+
+.card-purple {
+  background-color: var(--color-snuff);
+  border: 1px solid var(--color-dull-lavender);
+  color: var(--color-rhino);
+}
+.card-purple .card-header {
+  background-color: var(--color-dull-lavender);
+  color: var(--color-white);
 }
