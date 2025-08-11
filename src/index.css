@@ -1,5 +1,37 @@
+/* Importa los estilos base de Bootstrap */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Define la nueva paleta de colores usando variables CSS */
+:root {
+  --color-dark-brown: #714329;
+  --color-medium-brown: #B08463;
+  --color-light-medium-brown: #B9937B;
+  --color-beige: #D0B9A7;
+  --color-muted-brown: #B5A192;
+  --color-white: #ffffff;
+  --color-off-white: #f8f9fa;
+
+  --bs-primary: var(--color-dark-brown);
+  --bs-primary-rgb: 113, 67, 41;
+  
+  --bs-secondary: var(--color-medium-brown);
+  --bs-secondary-rgb: 176, 132, 99;
+
+  --bs-dark: var(--color-dark-brown);
+  --bs-dark-rgb: 113, 67, 41;
+
+  --bs-light: var(--color-beige);
+  --bs-light-rgb: 208, 185, 167;
+
+  --bs-body-color: var(--color-dark-brown);
+  --bs-body-bg: var(--color-off-white);
+  --bs-secondary-bg: var(--color-beige);
+
+  --bs-border-color: var(--color-muted-brown);
+  --bs-border-color-translucent: rgba(113, 67, 41, 0.175);
+}
+
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +39,120 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* --- ESTILOS PARA BOTONES --- */
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--color-medium-brown);
+  --bs-btn-hover-border-color: var(--color-medium-brown);
+  --bs-btn-active-bg: var(--color-medium-brown);
+  --bs-btn-active-border-color: var(--color-medium-brown);
+  --bs-btn-color: var(--color-white);
+  --bs-btn-hover-color: var(--color-white);
+  --bs-btn-active-color: var(--color-white);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-hover-border-color: var(--bs-primary);
+    --bs-btn-hover-color: var(--color-white);
+    --bs-btn-active-bg: var(--bs-primary);
+    --bs-btn-active-border-color: var(--bs-primary);
+    --bs-btn-active-color: var(--color-white);
+}
+
+.btn.disabled, .btn:disabled {
+  background-color: var(--color-muted-brown) !important;
+  border-color: var(--color-muted-brown) !important;
+  opacity: 0.7;
+}
+
+/* --- ESTILOS PARA EL FOOTER --- */
+.footer-link {
+  color: var(--color-beige);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.footer-link:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+.footer-social-icon {
+  color: var(--color-beige);
+  margin-left: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+.footer-social-icon:hover {
+  color: var(--color-white);
+}
+
+/* --- ¡NUEVO! ESTILOS RESPONSIVOS PARA EL CATÁLOGO --- */
+.mobile-filter-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1030; /* Debe estar sobre otros elementos */
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.offcanvas {
+  background-color: var(--bs-body-bg);
+}
+
+.offcanvas .card-header {
+  border-bottom: 1px solid var(--bs-border-color);
+}
+/* --- FIN DE ESTILOS RESPONSIVOS --- */
+
+
+/* --- OTROS ESTILOS --- */
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-brand,
+footer.bg-dark a.text-light {
+  color: var(--color-off-white) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--color-white) !important;
+  font-weight: bold;
+}
+
+.bg-primary .lead, .bg-primary .display-4, .bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary h4, .bg-primary h5 {
+  color: var(--color-off-white) !important;
+}
+
+.product-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 1px solid var(--bs-border-color);
+  background-color: var(--color-white);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-beige);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-medium-brown);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark-brown);
 }
