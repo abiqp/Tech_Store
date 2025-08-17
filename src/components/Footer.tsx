@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
         <div className="row align-items-center">
           <div className="col-md-7 col-lg-8">
             <p className="text-center text-md-start" style={{ color: 'var(--color-beige)' }}>
-              &copy; 2024 TechStore. Todos los derechos reservados.
+               &copy; 2025 ADQP TechStore.
             </p>
           </div>
           <div className="col-md-5 col-lg-4">
